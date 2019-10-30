@@ -11,8 +11,10 @@ public class HealthBase : MonoBehaviour, IHealth
     private BaseProperties baseProperties;
 
     private AttackBase attackBase;
+    private int maxHealth = 0;
 
     public event Action Die = delegate { }; 
+    public event Action<float> OnHealthPCTChanged = delegate { };
 
     private void Start()
     {
@@ -26,13 +28,16 @@ public class HealthBase : MonoBehaviour, IHealth
        
     public void setMaxHealth(int amount)
     {
-        health = amount;
+        maxHealth = amount;
+        health = maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0)
+        float currentHealthPct = (float)health / (float)maxHealth;
+        OnHealthPCTChanged(currentHealthPct);
+        if (health <= 0)
         {
             Die();
         }

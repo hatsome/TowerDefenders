@@ -47,8 +47,7 @@ public class HealtBar : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.LookAt(Camera.main.transform);
-        transform.Rotate(0, 180, 0);
+        transform.rotation = Camera.main.transform.rotation;
     }
 
     private void OnDestroy()

@@ -34,6 +34,7 @@ public class TargetFinder : MonoBehaviour
         if (enemy != null)
         {
             targets.Add(enemy);
+            enemy.Remove += OnTargetRemoved;
         }
     }
 
@@ -43,6 +44,13 @@ public class TargetFinder : MonoBehaviour
         if (enemy != null)
         {
             targets.Remove(enemy);
+            enemy.Remove -= OnTargetRemoved;
         }
+    }
+
+    private void OnTargetRemoved(Enemy enemy)
+    {
+        targets.Remove(enemy);
+        enemy.Remove -= OnTargetRemoved;
     }
 }

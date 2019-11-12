@@ -51,8 +51,7 @@ MonoBehaviour:
   - {fileID: 30032782591975167, guid: 26799c1188de0264d827dc08bc3672f5, type: 3}
   towerName: Ballistic Tower
   currentUpgradeIndex: 0
-  currentTowerUpgrade: {fileID: 7056332293575796265, guid: eb5e4783c40852b4a978bee96ec8c42b,
-    type: 3}
+  currentTowerUpgrade: {fileID: 0}
 --- !u!54 &2857744658238586754
 Rigidbody:
   m_ObjectHideFlags: 0

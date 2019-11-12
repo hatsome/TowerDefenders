@@ -16,6 +16,12 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private TowerUpgrade currentTowerUpgrade;
 
+    // For testing
+    private void Start()
+    {
+        UpgradeTo(0);
+    }
+
     public virtual void Initialize(Vector2 position)
     {
         transform.position = position;
@@ -30,7 +36,7 @@ public class Tower : MonoBehaviour
 
     private void UpgradeTo(int index)
     {
-        if (index > 0 && index < upgrades.Length)
+        if (index >= 0 && index < upgrades.Length)
         {
             currentUpgradeIndex = index;
 

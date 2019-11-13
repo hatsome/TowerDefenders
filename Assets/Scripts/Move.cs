@@ -1,85 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Move : MonoBehaviour
 {
-    private MoveController moveController;
-
     [SerializeField]
-    private float speed = 2f;
+    private List<PositionPath> firstPosition;
+    [SerializeField]
+    private PositionPath target;
 
-    private bool isMoveLeft;
-    private bool isMoveRight;
-    private bool isMoveUp;
-    private bool isMoveDown;
+    private NavMeshAgent agent;
+    private bool hasFirstPosition = true;
 
-    private Rigidbody rb;
-
-    void Start()
+    private void Start()
     {
-        moveController = GetComponent<MoveController>();
-        moveController.MoveLeft += OnMoveLeft;
-        moveController.MoveRight += OnMoveRight;
-        moveController.MoveUp += OnMoveUp;
-        moveController.MoveDown += OnMoveDown;
-
-        rb = GetComponent<Rigidbody>();
-    }
-
-    private void OnMoveLeft()
-    {
-        isMoveLeft = true;
-    }
-
-    private void OnMoveRight()
-    {
-        isMoveRight = true;
-    }
-
-    private void OnMoveUp()
-    {
-        isMoveUp = true;
-    }
-
-    private void OnMoveDown()
-    {
-        isMoveDown = true;
-    }
-
-    private void FixedUpdate()
-    {
-        if (isMoveLeft)
+        agent = GetComponent<NavMeshAgent>();
+        if (firstPosition.Count == 0)
         {
-            rb.MovePosition(transform.position + new Vector3(-speed, 0f, 0f) * Time.fixedDeltaTime);
-            isMoveLeft = false;
+            hasFirstPosition = false;
+            agent.SetDestination(target.transform.position);
         }
-
-        if (isMoveRight)
+        else
         {
-            rb.MovePosition(transform.position + new Vector3(speed, 0f, 0f) * Time.fixedDeltaTime);
-            isMoveRight = false;
-        }
-
-        if (isMoveUp)
-        {
-            rb.MovePosition(transform.position + new Vector3(0f, 0f, speed) * Time.fixedDeltaTime);
-            isMoveUp = false;
-        }
-
-        if (isMoveDown)
-        {
-            rb.MovePosition(transform.position + new Vector3(0f, 0f, -speed) * Time.fixedDeltaTime);
-            isMoveDown = false;
+            int index = Random.Range(0, firstPosition.Count);
+            agent.SetDestination(firstPosition[index].transform.position);
         }
     }
 
-
-    private void OnDestroy()
+    private void Update()
     {
-        moveController.MoveLeft -= OnMoveLeft;
-        moveController.MoveRight -= OnMoveRight;
-        moveController.MoveUp -= OnMoveLeft;
-        moveController.MoveDown -= OnMoveRight;
+        if (agent.remainingDistance <= 0.2f & hasFirstPosition)
+        {
+            agent.SetDestination(target.transform.position);
+        }
     }
 }

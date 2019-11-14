@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     [SerializeField]
-    private Wave[] waves = null;
+    private WaveProperties[] waves = null;
     private int nextWave = 0;
 
     [SerializeField]
@@ -113,15 +113,15 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnWave(Wave wave)
+    IEnumerator SpawnWave(WaveProperties wave)
     {
         Debug.Log("Spawning Wave: " + wave.name);
         state = SpawnState.SPAWNING;
 
-        for(int i = 0; i < wave.amount; i++)
+        for(int i = 0; i < wave.Amount; i++)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1.0f / wave.rate);
+            SpawnEnemy(wave.Enemy);
+            yield return new WaitForSeconds(1.0f / wave.Rate);
         }
 
         state = SpawnState.WAITING;

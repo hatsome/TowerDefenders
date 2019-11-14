@@ -21,7 +21,7 @@ public class HealthBase : MonoBehaviour, IHealth
         attackBase = GetComponentInChildren<AttackBase>();
         attackBase.ApplyDamage += TakeDamage;
 
-        setMaxHealth(baseProperties.GetMaxHealth());
+        setMaxHealth(baseProperties.MaxHealth);
 
         Debug.Log("Start");
     }

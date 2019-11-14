@@ -8,15 +8,11 @@ public class BaseProperties : ScriptableObject
     [SerializeField]
     private int maxHealth = 50;
 
-    // Start is called before the first frame update
-    void Start()
+    public int MaxHealth
     {
-        
-    }
-
-    // Update is called once per frame
-    public int GetMaxHealth()
-    {
-        return maxHealth;
+        get
+        {
+            return maxHealth;
+        }        
     }
 }

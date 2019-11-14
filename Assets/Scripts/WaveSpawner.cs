@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     [SerializeField]
-    private Wave[] waves;
+    private Wave[] waves = null;
     private int nextWave = 0;
 
     [SerializeField]
@@ -35,7 +35,12 @@ public class WaveSpawner : MonoBehaviour
         spawnPoints = GameObject.FindObjectsOfType<EnemySpawnPoint>();
         if(spawnPoints.Length == 0)
         {
-            Debug.LogError("No spawn points refereced.");
+            Debug.LogError("No spawn point is referenced.");
+        }
+
+        if(waves == null)
+        {
+            Debug.LogError("No Wave is referenced");
         }
 
         waveCountdown = timeStartNextWave;

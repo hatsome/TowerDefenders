@@ -6,7 +6,8 @@ using UnityEngine;
 public interface IHealth
 {
     event Action Die;
-    event Action<float> OnHealthPCTChanged;
+    event Action<int> OnMaxHealthChanged;
+    event Action<int> OnHealthPCTChanged;
     void setMaxHealth(int amount);
     void TakeDamage(int damage);
 }

@@ -11,6 +11,8 @@ public class HealtBar : MonoBehaviour
     private float updateSpeedSeconds = 0.2f;
     [SerializeField]
     private float criticalAmount = 0.5f;
+
+    private int maxHealth = 0;
     
     private IHealth health;
 
@@ -18,12 +20,20 @@ public class HealtBar : MonoBehaviour
     private void Awake()
     {
         health = GetComponentInParent<IHealth>();
+        health.OnMaxHealthChanged += HandleMaxHealthChanged;
         health.OnHealthPCTChanged += HandleHealthChanged;
     }
 
-    private void HandleHealthChanged(float pct)
+    private void HandleMaxHealthChanged(int mHealth)
     {
-        StartCoroutine(changeToPct(pct));
+        maxHealth = mHealth;
+        HandleHealthChanged(maxHealth);
+    }
+
+    private void HandleHealthChanged(int currentHealth)
+    {
+        float currentHealthPct = (float)currentHealth / (float)maxHealth;
+        StartCoroutine(changeToPct(currentHealthPct));
     }
 
     private IEnumerator changeToPct(float pct)
@@ -52,6 +62,7 @@ public class HealtBar : MonoBehaviour
 
     private void OnDestroy()
     {
+        health.OnMaxHealthChanged -= HandleMaxHealthChanged;
         health.OnHealthPCTChanged -= HandleHealthChanged;
     }
 }

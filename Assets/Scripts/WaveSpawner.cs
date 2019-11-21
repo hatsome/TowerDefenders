@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -30,6 +32,9 @@ public class WaveSpawner : MonoBehaviour
 
     private SpawnState state = SpawnState.COUNTING;
 
+    public event System.Action<int> OnWaveDefined = delegate { };
+    public event Action<int> OnWaveChanged = delegate { };
+
     private void Start()
     {
         spawnPoints = GameObject.FindObjectsOfType<EnemySpawnPoint>();
@@ -44,6 +49,10 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveCountdown = timeStartNextWave;
+        Debug.Log(waves.Length);
+        Debug.Log(nextWave + 1);
+        OnWaveDefined(waves.Length);
+        OnWaveChanged(nextWave + 1);
     }
 
     private void Update()
@@ -111,6 +120,8 @@ public class WaveSpawner : MonoBehaviour
 
             nextWave++;
         }
+        Debug.Log(nextWave + 1);
+        OnWaveChanged(nextWave + 1);
     }
 
     IEnumerator SpawnWave(WaveProperties wave)

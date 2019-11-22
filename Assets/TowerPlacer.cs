@@ -27,14 +27,18 @@ public class TowerPlacer : MonoBehaviour
 
                 transform.position = new Vector3(objectHit.position.x, transform.position.y, objectHit.position.z);
 
-                Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
             }
+            Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(towerPrefab, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 0.1f);
+            if (colliders.Length <= 0)
+            {
+                Instantiate(towerPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
         }
     }
 }

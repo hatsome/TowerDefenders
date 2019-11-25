@@ -13,7 +13,7 @@ public class BallisticWeapon : Weapon
     public override void Shoot(Enemy enemy)
     {
         Vector3 startPosition = transform.position;
-        var projectile = Instantiate(projectilePrefab, startPosition, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, startPosition, Quaternion.identity);
 
         Vector3 projectileXZPos = new Vector3(projectile.transform.position.x, 0.0f, projectile.transform.position.z);
         Vector3 targetXZPos = new Vector3(enemy.transform.position.x, 0.0f, enemy.transform.position.z);

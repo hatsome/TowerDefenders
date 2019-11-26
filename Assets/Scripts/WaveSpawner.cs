@@ -32,7 +32,7 @@ public class WaveSpawner : MonoBehaviour
 
     private SpawnState state = SpawnState.COUNTING;
 
-    public event System.Action<int> OnWaveDefined = delegate { };
+    public event Action<int> OnWaveDefined = delegate { };
     public event Action<int> OnWaveChanged = delegate { };
 
     private void Start()

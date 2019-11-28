@@ -13,8 +13,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TowerPlacer blastTowerPlacer;
 
+    [SerializeField]
+    private int money;
+
     public void OnPlaceBallisticTower()
     {
+
         Instantiate(ballisticTowerPlacer.gameObject);
     }
 
@@ -26,5 +30,18 @@ public class GameManager : MonoBehaviour
     public void OnPlaceBlastTower()
     {
         Instantiate(blastTowerPlacer.gameObject);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
+    public void OnMenuClick()
+    {
+        Application.Quit();
     }
 }

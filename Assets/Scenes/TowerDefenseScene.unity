@@ -366,6 +366,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnPlaceBlastTower
       objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9469433
+      objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.04313723
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02510e8abb2193a4fadc272cba80eeed, type: 3}
 --- !u!1 &557670678

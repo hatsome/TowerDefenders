@@ -1556,6 +1556,7 @@ GameObject:
   - component: {fileID: 374801265450012783}
   - component: {fileID: 374801265450012781}
   - component: {fileID: 374801265450012782}
+  - component: {fileID: 2829689783533570956}
   m_Layer: 5
   m_Name: Wave_Text
   m_TagString: Untagged
@@ -1622,6 +1623,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Wave 1/20
+--- !u!114 &2829689783533570956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374801265450012768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270be51fd15e0b546b36e04590f01100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 374801265450012782}
 --- !u!1 &374801265675917270
 GameObject:
   m_ObjectHideFlags: 0

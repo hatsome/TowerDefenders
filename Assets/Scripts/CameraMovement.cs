@@ -11,6 +11,13 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private float scrollSpeed = 20f;
 
+    [SerializeField]
+    private float panLimitXZ = 20f;
+    [SerializeField]
+    private float minPanLimitY = 10f;
+    [SerializeField]
+    private float maxPanLimitY = 20.5f;
+
     private CameraMovementController moveController;
 
     private bool isMoveLeft;
@@ -82,25 +89,27 @@ public class CameraMovement : MonoBehaviour
         float angleRightTime = 0f;
         Vector3 rotation = cameraPosTracker.rotation.eulerAngles;
 
-        if (isMoveLeft)
+        Vector3 pos = cameraPosTracker.position;
+
+        if (isMoveLeft & pos.z < panLimitXZ)
         {
             direction.z = panspeed * Time.deltaTime;
             isMoveLeft = false;
         }
 
-        if (isMoveRight)
+        if (isMoveRight & pos.z > -panLimitXZ)
         {
             direction.z = -panspeed * Time.deltaTime;
             isMoveRight = false;
         }
         
-        if (isMoveUp)
+        if (isMoveUp & pos.x < panLimitXZ)
         {
             direction.x = panspeed * Time.deltaTime;
             isMoveUp = false;
         }
 
-        if (isMoveDown)
+        if (isMoveDown & pos.x > -panLimitXZ)
         {
             direction.x = -panspeed * Time.deltaTime;
             isMoveDown = false;
@@ -118,7 +127,7 @@ public class CameraMovement : MonoBehaviour
             isRotateRight = false;
         }
 
-        if(valueZoomCamera != 0)
+        if((valueZoomCamera < 0 & pos.y < maxPanLimitY) | (valueZoomCamera > 0 & pos.y > minPanLimitY))
         {
             direction.y -= valueZoomCamera * scrollSpeed * 50f * Time.deltaTime;
             valueZoomCamera = 0;

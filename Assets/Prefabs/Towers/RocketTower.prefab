@@ -52,6 +52,7 @@ MonoBehaviour:
   towerName: Rocket Tower
   currentUpgradeIndex: 0
   currentTowerUpgrade: {fileID: 0}
+  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
 --- !u!54 &4037634931301275742
 Rigidbody:
   m_ObjectHideFlags: 0

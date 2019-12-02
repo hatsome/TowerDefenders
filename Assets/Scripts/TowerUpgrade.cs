@@ -5,8 +5,10 @@ using UnityEngine;
 public class TowerUpgrade : MonoBehaviour
 {
     [SerializeField]
-    private int cost;
-    //public int cost { get; private set; }
+    private Money builMoney;
+
+    [SerializeField]
+    private Money money;
 
     [SerializeField]
     private int maxHealth;
@@ -16,5 +18,6 @@ public class TowerUpgrade : MonoBehaviour
     public virtual void Initialize(Tower tower)
     {
         parent = tower;
+        money.Decrease(builMoney.MoneyAmount);
     }
 }

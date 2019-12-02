@@ -7,11 +7,6 @@ public class TowerPlacer : MonoBehaviour
     [SerializeField]
     GameObject towerPrefab;
 
-    //[SerializeField]
-    //private Money money;
-
-    //private int cost;
-
     private Camera mainCamera;
 
     private void Start()
@@ -42,8 +37,7 @@ public class TowerPlacer : MonoBehaviour
             if (colliders.Length <= 0)
             {
                 Instantiate(towerPrefab, transform.position, Quaternion.identity);
-                //cost = towerPrefab.gameObject.GetComponent<Tower>().currentTowerUpgrade.cost;
-                //money.Decrease(cost);
+
                 Destroy(this.gameObject);
             }
         }

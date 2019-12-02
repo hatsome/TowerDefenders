@@ -23,13 +23,13 @@ public class GameManager : MonoBehaviour
     private int startMoney = 800;
 
     [SerializeField]
-    private int costBallistic = 125;
+    private Money costBallistic;
 
     [SerializeField]
-    private int costRocket = 150;
+    private Money costRocket;
 
     [SerializeField]
-    private int costBlast = 200;
+    private Money costBlast;
 
     private bool isBallisticBuyable;
     private bool isRocketBuyable;
@@ -77,19 +77,19 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        if ((isBallisticBuyable & money.MoneyAmount < costBallistic) | (!isBallisticBuyable & money.MoneyAmount > costBallistic))
+        if ((isBallisticBuyable & money.MoneyAmount < costBallistic.MoneyAmount) | (!isBallisticBuyable & money.MoneyAmount > costBallistic.MoneyAmount))
         {
             isBallisticBuyable = !isBallisticBuyable;
             OnBuyableBallistic(isBallisticBuyable);
         }
 
-        if ((isRocketBuyable & money.MoneyAmount < costRocket) | (!isRocketBuyable & money.MoneyAmount > costRocket))
+        if ((isRocketBuyable & money.MoneyAmount < costRocket.MoneyAmount) | (!isRocketBuyable & money.MoneyAmount > costRocket.MoneyAmount))
         {
             isRocketBuyable = !isRocketBuyable;
             OnBuyableRocket(isRocketBuyable);
         }
 
-        if ((isBlastBuyable & money.MoneyAmount < costBlast) | (!isBlastBuyable & money.MoneyAmount > costBlast))
+        if ((isBlastBuyable & money.MoneyAmount < costBlast.MoneyAmount) | (!isBlastBuyable & money.MoneyAmount > costBlast.MoneyAmount))
         {
             isBlastBuyable = !isBlastBuyable;
             OnBuyableBlast(isBlastBuyable);

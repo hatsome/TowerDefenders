@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b32cd8e2cce9584b9d665ef9ad58b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 80
+  builMoney: {fileID: 11400000, guid: fd297acbbe7db6b469f8ad49aeb39d92, type: 2}
+  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
   maxHealth: 10
 --- !u!1 &4005767215868415405
 GameObject:

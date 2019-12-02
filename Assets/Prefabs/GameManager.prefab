@@ -51,6 +51,6 @@ MonoBehaviour:
     type: 3}
   money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
   startMoney: 800
-  costBallistic: 125
-  costRocket: 150
-  costBlast: 200
+  costBallistic: {fileID: 11400000, guid: 5065f026a83931e47b8114912133e80d, type: 2}
+  costRocket: {fileID: 11400000, guid: df9ce5e978db5d546a0308721cb22651, type: 2}
+  costBlast: {fileID: 11400000, guid: 15a08f865463ea740842ad3e8887d508, type: 2}

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70da6b45fc3193d41abe07ed2eeb2593, type: 3}
-  m_Name: StartMoney
+  m_Name: Rocket0
   m_EditorClassIdentifier: 
-  moneyAmount: 469
+  moneyAmount: 130

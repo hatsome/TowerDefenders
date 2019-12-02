@@ -15,7 +15,6 @@ public class Tower : MonoBehaviour
 
     [SerializeField]
     private TowerUpgrade currentTowerUpgrade;
-    //public TowerUpgrade currentTowerUpgrade { get; private set; }
 
     // For testing
     private void Start()
@@ -50,5 +49,7 @@ public class Tower : MonoBehaviour
 
             currentTowerUpgrade.Initialize(this);
         }
+
+        Debug.Log(currentTowerUpgrade);
     }
 }

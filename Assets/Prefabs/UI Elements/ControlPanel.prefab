@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 374801265033496225}
   - component: {fileID: 374801265033496239}
   - component: {fileID: 374801265033496224}
+  - component: {fileID: 722566215}
   m_Layer: 5
   m_Name: Builder_Panel
   m_TagString: Untagged
@@ -1118,6 +1119,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &722566215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374801265033496226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bf8ba57950b4647bb377bae2060429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonBallistic: {fileID: 374801265773994278}
+  buttonRocket: {fileID: 374801265259492135}
+  buttonBlast: {fileID: 374801265342011705}
 --- !u!1 &374801265175405074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 374801265259492134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2569461103368206023, guid: af9f7cc50fce2584bbb0e30a2ce73fc7,
+          type: 3}
+        m_MethodName: OnPlaceRocketTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &374801265342011707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1577,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e4dd2b4e61e9eff44956555187123a3a, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 0}
+        m_MethodName: OnPlaceBlastTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1922,7 +1950,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 374801265773994277}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnPlaceBallisticTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &374801265894786651
 GameObject:
   m_ObjectHideFlags: 0

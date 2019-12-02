@@ -6,6 +6,7 @@ public class TowerUpgrade : MonoBehaviour
 {
     [SerializeField]
     private int cost;
+    //public int cost { get; private set; }
 
     [SerializeField]
     private int maxHealth;

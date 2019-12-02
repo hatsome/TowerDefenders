@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2569461103368206020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2569461103368206022}
+  - component: {fileID: 2569461103368206023}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2569461103368206022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569461103368206020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2569461103368206023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569461103368206020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3c8ab6e6d1a52448918bc5ea636940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballisticTowerPlacer: {fileID: 7313108838588726915, guid: 916313afbf46ae343919c23549c5e2d0,
+    type: 3}
+  rocketTowerTowerPlacer: {fileID: 2122575845620639594, guid: 047d4d2266d289c43b547521b9f4c15c,
+    type: 3}
+  blastTowerPlacer: {fileID: 3122399322207516475, guid: ca64aacd7e9c4a647af2d608d9d6c997,
+    type: 3}
+  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
+  startMoney: 800
+  costBallistic: 125
+  costRocket: 150
+  costBlast: 200

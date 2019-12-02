@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 374801263908131212}
   - component: {fileID: 374801263908131210}
   - component: {fileID: 374801263908131211}
+  - component: {fileID: 6155577971483910124}
   m_Layer: 5
   m_Name: Money_Text
   m_TagString: Untagged
@@ -335,6 +336,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Money 0$
+--- !u!114 &6155577971483910124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374801263908131213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82875891838218e458237417b7a08c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textfeldMoney: {fileID: 374801263908131211}
+  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
 --- !u!1 &374801263975370642
 GameObject:
   m_ObjectHideFlags: 0

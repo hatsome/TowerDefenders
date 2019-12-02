@@ -7,6 +7,12 @@ public class WeakHealth : MonoBehaviour, IHealth
 {
     [SerializeField]
     private int health = 10;
+
+    [SerializeField]
+    private Money money;
+
+    [SerializeField]
+    private int bonusMoney = 50;
     
     private int maxHealth = 0;
 
@@ -39,6 +45,7 @@ public class WeakHealth : MonoBehaviour, IHealth
         OnHealthPCTChanged(health);
         if (health <= 0)
         {
+            money.Increase(bonusMoney);
             Die();
         }
     }

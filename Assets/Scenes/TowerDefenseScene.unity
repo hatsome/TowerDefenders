@@ -155,7 +155,11 @@ MonoBehaviour:
     type: 3}
   blastTowerPlacer: {fileID: 3122399322207516475, guid: ca64aacd7e9c4a647af2d608d9d6c997,
     type: 3}
-  money: 0
+  money: {fileID: 0}
+  startMoney: 800
+  costBallistic: {fileID: 0}
+  costRocket: {fileID: 0}
+  costBlast: {fileID: 0}
 --- !u!4 &85312424
 Transform:
   m_ObjectHideFlags: 0
@@ -397,6 +401,16 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.04313723
       objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 374801264035597529, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 374801265175405072, guid: 02510e8abb2193a4fadc272cba80eeed,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -426,6 +440,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275806726623951768, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374022903466157095, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709868978809456965, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 516418989026940404, guid: 02510e8abb2193a4fadc272cba80eeed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02510e8abb2193a4fadc272cba80eeed, type: 3}

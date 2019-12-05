@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey("escape"))
         {
-            Application.Quit();
+            SceneManager.LoadScene("Menu");
         }
 
         if ((isBallisticBuyable & money.MoneyAmount < costBallistic.MoneyAmount) | (!isBallisticBuyable & money.MoneyAmount > costBallistic.MoneyAmount))
@@ -98,6 +99,6 @@ public class GameManager : MonoBehaviour
 
     public void OnMenuClick()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 }

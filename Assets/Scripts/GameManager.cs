@@ -36,9 +36,18 @@ public class GameManager : MonoBehaviour
     private bool isRocketBuyable;
     private bool isBlastBuyable;
 
+    private bool isTowerUpgradable;
+    private bool isTowerSellable;
+
+    private Tower selectedTower;
+    private Camera mainCamera;
+
     public event Action<bool> OnBuyableBallistic = delegate { };
     public event Action<bool> OnBuyableRocket = delegate { };
     public event Action<bool> OnBuyableBlast = delegate { };
+
+    public event Action<bool> OnTowerUpgradeable = delegate { };
+    public event Action<bool> OnTowerSellable = delegate { };
 
     private void Awake()
     {
@@ -50,6 +59,11 @@ public class GameManager : MonoBehaviour
         isBallisticBuyable = true;
         isRocketBuyable = true;
         isBlastBuyable = true;
+
+        isTowerUpgradable = false;
+        isTowerSellable = false;
+
+        mainCamera = Camera.main;
 
         money.Initialize(startMoney);
 
@@ -71,9 +85,25 @@ public class GameManager : MonoBehaviour
         Instantiate(blastTowerPlacer.gameObject);
     }
 
+    public void OnTowerUpgrade()
+    {
+        if (selectedTower != null)
+        {
+            selectedTower.Upgrade();
+        }
+    }
+
+    public void OnTowerSell()
+    {
+        if (selectedTower != null)
+        {
+            Destroy(selectedTower.gameObject);
+        }
+    }
+
     public void Update()
     {
-        if (Input.GetKey("escape"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("Menu");
         }
@@ -94,6 +124,34 @@ public class GameManager : MonoBehaviour
         {
             isBlastBuyable = !isBlastBuyable;
             OnBuyableBlast(isBlastBuyable);
+        }
+
+        if ((isTowerUpgradable && selectedTower == null) || (selectedTower != null && ((isTowerUpgradable & money.MoneyAmount < selectedTower.GetUpgradeCost()) || (!isTowerUpgradable & money.MoneyAmount > selectedTower.GetUpgradeCost()))))
+        {
+            isTowerUpgradable = !isTowerUpgradable;
+            OnTowerUpgradeable(isTowerUpgradable);
+        }
+
+        if ((isTowerSellable && selectedTower == null) || (!isTowerSellable && selectedTower != null))
+        {
+            isTowerSellable = !isTowerSellable;
+            OnTowerSellable(isTowerSellable);
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.tag == "Tower")
+                {
+                    selectedTower = hit.transform.gameObject.GetComponentInParent<Tower>();
+                }
+                Debug.Log(hit.collider.tag);
+                Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
+            }
         }
     }
 

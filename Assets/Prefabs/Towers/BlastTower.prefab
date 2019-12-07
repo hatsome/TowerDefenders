@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2506256788065485947}
   m_Layer: 0
   m_Name: BlastTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   towerName: Blast Tower
   currentUpgradeIndex: 0
   currentTowerUpgrade: {fileID: 0}
-  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
 --- !u!54 &2506256788065485946
 Rigidbody:
   m_ObjectHideFlags: 0

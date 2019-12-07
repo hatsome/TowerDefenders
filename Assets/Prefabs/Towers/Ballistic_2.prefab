@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b32cd8e2cce9584b9d665ef9ad58b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  builMoney: {fileID: 11400000, guid: 79b160315ccd5944b9c06fc68082f50e, type: 2}
+  buildMoney: {fileID: 11400000, guid: 79b160315ccd5944b9c06fc68082f50e, type: 2}
   money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
   maxHealth: 9
 --- !u!1 &3656820245713972248
@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3656820245713972248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8071118687990248769}
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0a2fdd7e58c1c4f8adb36670e858e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7729155012179015786, guid: aa469b6ffd2baac47a44d254263765fb,
+  projectilePrefab: {fileID: 7729155012179015786, guid: c1e06beb15b268f45b9a9fedd3189be0,
     type: 3}
-  launchAngle: 50
+  flightTime: 1.5
 --- !u!114 &4588281626188644057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 589416545350103211}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 7016842612171438968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.5, z: 0.8}
   m_Children: []
   m_Father: {fileID: 8071118687990248769}
   m_RootOrder: 0

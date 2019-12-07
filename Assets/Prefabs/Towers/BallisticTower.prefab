@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2857744658238586755}
   m_Layer: 0
   m_Name: BallisticTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   towerName: Ballistic Tower
   currentUpgradeIndex: 0
   currentTowerUpgrade: {fileID: 0}
-  money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
 --- !u!54 &2857744658238586754
 Rigidbody:
   m_ObjectHideFlags: 0

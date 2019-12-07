@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b32cd8e2cce9584b9d665ef9ad58b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  builMoney: {fileID: 11400000, guid: fd297acbbe7db6b469f8ad49aeb39d92, type: 2}
+  buildMoney: {fileID: 11400000, guid: fd297acbbe7db6b469f8ad49aeb39d92, type: 2}
   money: {fileID: 11400000, guid: 384b6959a9f32f34db3a49642002a432, type: 2}
   maxHealth: 10
 --- !u!1 &4005767215868415405
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 4005767215868415407}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 4005767215868415405}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4005767215622275768}
   m_RootOrder: 0

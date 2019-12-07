@@ -29,6 +29,15 @@ public class Tower : MonoBehaviour
         UpgradeTo(0);
     }
 
+    public int GetUpgradeCost()
+    {
+        if (currentUpgradeIndex + 1 < upgrades.Length)
+        {
+            return upgrades[currentUpgradeIndex + 1].GetCost().MoneyAmount;
+        }
+        return int.MaxValue;
+    }
+
     public void Upgrade()
     {
         UpgradeTo(currentUpgradeIndex + 1);

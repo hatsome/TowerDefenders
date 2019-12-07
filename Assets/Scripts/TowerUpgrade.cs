@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerUpgrade : MonoBehaviour
 {
     [SerializeField]
-    private Money builMoney;
+    private Money buildMoney;
 
     [SerializeField]
     private Money money;
@@ -18,6 +18,16 @@ public class TowerUpgrade : MonoBehaviour
     public virtual void Initialize(Tower tower)
     {
         parent = tower;
-        money.Decrease(builMoney.MoneyAmount);
+        money.Decrease(buildMoney.MoneyAmount);
+    }
+
+    public Money GetCost()
+    {
+        return buildMoney;
+    }
+
+    private void OnDestroy()
+    {
+        money.Increase(buildMoney.MoneyAmount / 2);
     }
 }

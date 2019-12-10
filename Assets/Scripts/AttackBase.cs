@@ -10,8 +10,11 @@ public class AttackBase : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        ApplyDamage(10);
-        Destroy(other.gameObject);
-        Debug.Log("Collision detected");
+        if(other.gameObject.GetComponent<Enemy>() != null)
+        {
+            ApplyDamage(10);
+            Destroy(other.gameObject);
+            Debug.Log("Collision detected");
+        }        
     }
 }

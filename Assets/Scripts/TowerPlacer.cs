@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TowerPlacer : MonoBehaviour
 {
     [SerializeField]
     GameObject towerPrefab;
+
+    private NavMeshSurface[] navMeshes;
 
     private Camera mainCamera;
 
@@ -37,6 +40,13 @@ public class TowerPlacer : MonoBehaviour
             if (colliders.Length <= 0)
             {
                 Instantiate(towerPrefab, transform.position, Quaternion.identity);
+
+                navMeshes = FindObjectsOfType<NavMeshSurface>();
+                
+                foreach(NavMeshSurface navMesh in navMeshes)
+                {
+                    navMesh.BuildNavMesh();
+                }
 
                 Destroy(this.gameObject);
             }

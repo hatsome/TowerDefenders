@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2166603808373532451}
   - component: {fileID: 3531202934389448228}
   - component: {fileID: 7853430973830610273}
+  - component: {fileID: 1916127803343909629}
   m_Layer: 9
   m_Name: BaseHolder
   m_TagString: Untagged
@@ -178,6 +179,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bab2b5ce7241e9479131a7c1278b518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1916127803343909629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401477449667056295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac3d8a7f3be86c45a4a539e8758e6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticlePrefab: {fileID: 5183566524737531933, guid: 8af6ee4d253bb834f95cd74a513879e3,
+    type: 3}
 --- !u!1001 &6043508442212963572
 PrefabInstance:
   m_ObjectHideFlags: 0

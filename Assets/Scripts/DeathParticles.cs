@@ -6,6 +6,8 @@ public class DeathParticles : MonoBehaviour
 {
     [SerializeField]
     private ParticleSystem deathParticlePrefab;
+    [SerializeField]
+    private Vector3 offset;
 
     private IHealth health;
 
@@ -18,7 +20,7 @@ public class DeathParticles : MonoBehaviour
 
     private void OnDeath()
     {
-        var deathParticle = Instantiate(deathParticlePrefab, transform.position, transform.rotation);
+        var deathParticle = Instantiate(deathParticlePrefab, transform.position + offset, transform.rotation);
 
         Destroy(deathParticle, deathParticle.duration);
     }

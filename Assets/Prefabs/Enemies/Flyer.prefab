@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -3149235828723945019}
   - component: {fileID: 2430917779238337285}
   - component: {fileID: 8859177042765334537}
+  - component: {fileID: 8621390848276147150}
   m_Layer: 8
   m_Name: Flyer
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2185089511650606837}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -236,6 +237,21 @@ CapsuleCollider:
   m_Height: 0.9
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &8621390848276147150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185089511650606837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac3d8a7f3be86c45a4a539e8758e6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticlePrefab: {fileID: 5183566524737531933, guid: a93b84d5f7b979f4aa27a75f3bcd67ec,
+    type: 3}
+  offset: {x: 0, y: 1, z: 0}
 --- !u!1001 &6897723441757908849
 PrefabInstance:
   m_ObjectHideFlags: 0

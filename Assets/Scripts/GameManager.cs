@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
             OnTowerSellable(isTowerSellable);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log(hit.collider.tag);
                 Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
             }
-        }
+        }*/
     }
 
     public void OnMenuClick()

@@ -159,4 +159,20 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void OnPauseClick()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void OnPlayClick()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void OnSpeedPlayClick()
+    {
+        Time.timeScale = 2f;
+    }
+
 }

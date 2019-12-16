@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     private bool isTowerSellable;
 
     private Tower selectedTower;
-    private Camera mainCamera;
 
     public event Action<bool> OnBuyableBallistic = delegate { };
     public event Action<bool> OnBuyableRocket = delegate { };
@@ -62,8 +61,6 @@ public class GameManager : MonoBehaviour
 
         isTowerUpgradable = false;
         isTowerSellable = false;
-
-        mainCamera = Camera.main;
 
         money.Initialize(startMoney);
 
@@ -141,18 +138,38 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.tag == "Tower")
                 {
-                    selectedTower = hit.transform.gameObject.GetComponentInParent<Tower>();
+                    Tower selection = hit.transform.gameObject.GetComponentInParent<Tower>();
+                    ChangeSelectedTower(selection);
                 }
                 Debug.Log(hit.collider.tag);
                 Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
             }
         }
+    }
+
+    private void ChangeSelectedTower(Tower newSelection)
+    {
+        if (selectedTower != null)
+        {
+            selectedTower.SwitchRadiusVisibilty();
+            if (selectedTower.Equals(newSelection))
+            {
+                newSelection = null;
+            }
+        }
+
+        if (newSelection != null)
+        {
+            newSelection.SwitchRadiusVisibilty();
+        }
+
+        selectedTower = newSelection;
     }
 
     public void OnMenuClick()

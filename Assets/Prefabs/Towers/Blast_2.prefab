@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4005767215622275768}
   - component: {fileID: 4005767215622275771}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blast_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4005767215868415441}
   - component: {fileID: 4005767215868415406}
   - component: {fileID: 4005767215868415407}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 4005767216023048446}
   - component: {fileID: 4005767216023048417}
   - component: {fileID: 4005767216023048416}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,5 +255,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}

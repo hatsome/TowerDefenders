@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4443758995517927865}
   - component: {fileID: 6003094212960577066}
   - component: {fileID: 1594914273946393632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticlePrefab: {fileID: 5183566524737531933, guid: 50588599cfa0c75489847d2431cd7b34,
     type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &3157237274644779323
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ GameObject:
   - component: {fileID: 3157237274644779322}
   - component: {fileID: 3157237274644779319}
   - component: {fileID: 3157237274644779316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,11 +260,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3157237273961886361}
     m_Modifications:
-    - target: {fileID: 8622417964696716457, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
-        type: 3}
-      propertyPath: m_Name
-      value: HealtBarHolder
-      objectReference: {fileID: 0}
     - target: {fileID: 8807512487450457331, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +313,31 @@ PrefabInstance:
     - target: {fileID: 8807512487450457331, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622417964696716457, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
+        type: 3}
+      propertyPath: m_Name
+      value: HealtBarHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622417964696716457, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723733906342679265, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 461782922984366093, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113072954392710866, guid: 35f68c92cb58b094f9bd4f58a7e48a44,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

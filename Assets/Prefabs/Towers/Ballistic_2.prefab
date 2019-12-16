@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8071118687990248769}
   - component: {fileID: 30032782591975167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ballistic_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 2164758739859191622}
   - component: {fileID: 6580298473561292772}
   - component: {fileID: 4588281626188644057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 1863801768203451112}
   - component: {fileID: 746878064081194321}
   - component: {fileID: 589416545350103211}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Tower
   m_Icon: {fileID: 0}

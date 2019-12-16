@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7285607689651483808}
   - component: {fileID: 7285607689651483811}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blast_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7285607689833424614}
   - component: {fileID: 7285607689833424633}
   - component: {fileID: 7285607689833424632}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7285607689947429833}
   - component: {fileID: 7285607689947429814}
   - component: {fileID: 7285607689947429815}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Tower
   m_Icon: {fileID: 0}

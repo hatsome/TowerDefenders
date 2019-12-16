@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 5441199982673382247}
   - component: {fileID: 6246458974856569427}
   - component: {fileID: 9152640623871593043}
-  - component: {fileID: 4585197170830633941}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -79,19 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &4585197170830633941
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2312644222744970493}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2322029450401706491
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +90,7 @@ GameObject:
   - component: {fileID: 2322029450401706487}
   - component: {fileID: 2322029450401706484}
   - component: {fileID: 2322029450401706485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -196,7 +182,7 @@ GameObject:
   - component: {fileID: 2322029450590270022}
   - component: {fileID: 2322029450590270017}
   - component: {fileID: 2322029450590270016}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +274,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2322029451206155212
 MonoBehaviour:
@@ -312,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2322029451571973037}
   - component: {fileID: 2322029451571973036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rocket_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

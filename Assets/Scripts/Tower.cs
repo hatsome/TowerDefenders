@@ -16,6 +16,9 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private TowerUpgrade currentTowerUpgrade;
 
+    [SerializeField]
+    private GameObject radius;
+
     // For testing
     private void Start()
     {
@@ -57,8 +60,23 @@ public class Tower : MonoBehaviour
             currentTowerUpgrade = Instantiate(upgrades[currentUpgradeIndex], transform);
 
             currentTowerUpgrade.Initialize(this);
+
+            UpdateRadius();
         }
 
         Debug.Log(currentTowerUpgrade);
+    }
+
+    public void SwitchRadiusVisibilty()
+    {
+        radius.SetActive(!radius.activeInHierarchy);
+    }
+
+    private void UpdateRadius()
+    {
+        float r = currentTowerUpgrade.GetComponentInChildren<SphereCollider>().radius;
+        float scaleX = r*2;
+        float scaleY = r*2;
+        radius.transform.localScale = new Vector3(scaleX, scaleY, 1);
     }
 }

@@ -19,6 +19,8 @@ public class TowerUpgrade : MonoBehaviour
     {
         parent = tower;
         money.Decrease(buildMoney.MoneyAmount);
+
+        AudioManager.Instance.Play(AudioManager.SoundType.PLACE);
     }
 
     public Money GetCost()

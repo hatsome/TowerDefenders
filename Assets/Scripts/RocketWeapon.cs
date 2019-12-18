@@ -10,5 +10,6 @@ public class RocketWeapon : Weapon
     public override void Shoot(Enemy enemy)
     {
         GameObject projectile = Instantiate(projectilePrefab, enemy.transform.position, Quaternion.identity);
+        AudioManager.Instance.Play(AudioManager.SoundType.SHOT);
     }
 }

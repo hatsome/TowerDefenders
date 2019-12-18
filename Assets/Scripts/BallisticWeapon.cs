@@ -22,5 +22,7 @@ public class BallisticWeapon : Weapon
         float vz = (target.z - startPosition.z) / flightTime;
         float vy = ((target.y - startPosition.y) - 0.5f * Physics.gravity.y * flightTime * flightTime) / flightTime;
         projectile.GetComponent<Rigidbody>().velocity = new Vector3(vx, vy, vz);
+
+        AudioManager.Instance.Play(AudioManager.SoundType.SHOT_BALLISTIC);
     }
 }

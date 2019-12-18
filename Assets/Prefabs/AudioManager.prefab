@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5448704971643107214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5448704971643107212}
+  - component: {fileID: 5448704971643107213}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5448704971643107212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448704971643107214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5448704971643107213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448704971643107214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3708c07edb99c944f89ccd2b9d3ae716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundType: 3
+    volume: 0.2
+    loop: 0
+    mute: 0
+    audioClip: {fileID: 8300000, guid: 5a168180dc1080b4a91d6589e7da875a, type: 3}
+    audioSource: {fileID: 0}
+  - soundType: 2
+    volume: 0.2
+    loop: 0
+    mute: 0
+    audioClip: {fileID: 8300000, guid: 2def972de715bdc4eb70c0c9e1286e18, type: 3}
+    audioSource: {fileID: 0}
+  - soundType: 4
+    volume: 0.8
+    loop: 0
+    mute: 0
+    audioClip: {fileID: 8300000, guid: 1a5fc600f1ca76e43b82914026e4b670, type: 3}
+    audioSource: {fileID: 0}
+  - soundType: 1
+    volume: 0.8
+    loop: 0
+    mute: 0
+    audioClip: {fileID: 8300000, guid: d5cb59dee4a8fd64aaaf44fdd7456507, type: 3}
+    audioSource: {fileID: 0}
+  - soundType: 5
+    volume: 0.8
+    loop: 0
+    mute: 0
+    audioClip: {fileID: 8300000, guid: c2d8e59484418b5439850e7915f991d4, type: 3}
+    audioSource: {fileID: 0}

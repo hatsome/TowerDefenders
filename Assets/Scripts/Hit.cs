@@ -14,6 +14,8 @@ public class Hit : MonoBehaviour
         {
             ApplyHit(1);
             Destroy(other.gameObject);
+
+            AudioManager.Instance.Play(AudioManager.SoundType.HIT);
         }
     }
 }

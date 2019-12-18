@@ -107,7 +107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 98cc2d8c291c8744dbce5ec0b51787c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetFinder: {fileID: 886663158028927547}
-  attackSpeed: 1
+  attackSpeed: 0.6
 --- !u!114 &886663157792468774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 886663158028927549}
   - component: {fileID: 886663158028927547}
   - component: {fileID: 886663158028927548}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TargetFinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

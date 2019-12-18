@@ -50,7 +50,7 @@ MonoBehaviour:
   upgrades:
   - {fileID: 7056332293575796265, guid: eb5e4783c40852b4a978bee96ec8c42b, type: 3}
   - {fileID: 7459999300019965679, guid: e155227399ec827468d00ec822bcab60, type: 3}
-  - {fileID: 30032782591975167, guid: 26799c1188de0264d827dc08bc3672f5, type: 3}
+  - {fileID: 7459999300019965679, guid: 9997007931c00424cafc018230abc6af, type: 3}
   towerName: Ballistic Tower
   currentUpgradeIndex: 0
   currentTowerUpgrade: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857744658238586758}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
   m_Name: 

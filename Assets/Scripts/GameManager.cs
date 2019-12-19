@@ -60,8 +60,6 @@ public class GameManager : MonoBehaviour
         isTowerUpgradable = false;
         isTowerSellable = false;
 
-        AudioManager.Instance.Play(AudioManager.SoundType.GAME);
-
         money.Initialize(startMoney);
 
         DontDestroyOnLoad(gameObject);

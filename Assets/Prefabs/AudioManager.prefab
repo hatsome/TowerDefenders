@@ -64,7 +64,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - soundType: 1
     volume: 0.8
-    loop: 0
+    loop: 1
     mute: 0
     audioClip: {fileID: 8300000, guid: d5cb59dee4a8fd64aaaf44fdd7456507, type: 3}
     audioSource: {fileID: 0}
